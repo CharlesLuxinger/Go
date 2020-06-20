@@ -1,44 +1,62 @@
 package main
 
-import "fmt"
-import "os"
+import (
+	"fmt"
+	"net/http"
+	"os"
+)
 
 func main() {
 
-    exibeIntroducao()
-    exibeMenu()
-    comando := leComando()
+	exibeIntroducao()
+	exibeMenu()
+	comando := leComando()
 
-    switch comando {
-    case 1:
-        fmt.Println("Monitorando...")
-    case 2:
-        fmt.Println("Exibindo Logs...")
-    case 0:
-        fmt.Println("Saindo do programa...")
-        os.Exit(0)
-    default:
-        fmt.Println("Não conheço este comando")
-    }
+	switch comando {
+	case 1:
+		iniciarMonitoramento()
+	case 2:
+		fmt.Println("Exibindo Logs...")
+	case 0:
+		fmt.Println("Saindo do programa...")
+		os.Exit(0)
+	default:
+		fmt.Println("Não conheço este comando")
+	}
 }
 
 func exibeIntroducao() {
-    nome := "Charles"
-    versao := 1.1
-    fmt.Println("Olá, sr.", nome)
-    fmt.Println("Este programa está na versão", versao)
+	nome := "Charles"
+	versao := 1.1
+	fmt.Println("Olá, sr.", nome)
+	fmt.Println("Este programa está na versão", versao)
 }
 
 func exibeMenu() {
-    fmt.Println("1- Iniciar Monitoramento")
-    fmt.Println("2- Exibir Logs")
-    fmt.Println("0- Sair do Programa")
+	fmt.Println("1- Iniciar Monitoramento")
+	fmt.Println("2- Exibir Logs")
+	fmt.Println("0- Sair do Programa")
 }
 
 func leComando() int {
-    var comandoLido int
-    fmt.Scan(&comandoLido)
-    fmt.Println("O comando escolhido foi", comandoLido)
+	var comandoLido int
+	fmt.Scan(&comandoLido)
+	fmt.Println("O comando escolhido foi", comandoLido)
 
-    return comandoLido
+	return comandoLido
+}
+
+func iniciarMonitoramento() {
+	fmt.Println("Monitorando...")
+
+	site := "https://www.google.com"
+
+	response, _ := http.Get(site)
+
+	if response.StatusCode == 200 {
+		fmt.Println("Server Up")
+	} else {
+		fmt.Println("Server Down, Status Code:", response.StatusCode)
+	}
+
 }
