@@ -1,0 +1,5 @@
+2020/06/22 20:09:24 - https://random-status-code.herokuapp.com/ - status code: 200
+2020/06/22 20:09:26 - https://random-status-code.herokuapp.com/ - status code: 200
+2020/06/22 20:09:29 - https://random-status-code.herokuapp.com/ - status code: 200
+2020/06/22 20:09:32 - https://random-status-code.herokuapp.com/ - status code: 404
+2020/06/22 20:09:33 - https://random-status-code.herokuapp.com/ - status code: 200
