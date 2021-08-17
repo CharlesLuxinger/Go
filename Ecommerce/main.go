@@ -8,7 +8,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 
-	"Go/Ecommerce/produtos"
+	"github.com/CharlesLuxinger/Go/Ecommerce/produtos"
 )
 
 var templates = template.Must(template.ParseGlob("templates/*.html"))

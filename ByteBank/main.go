@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"Go/ByteBank/clientes"
-	"Go/ByteBank/contas"
+	"github.com/CharlesLuxinger/Go/ByteBank/clientes"
+	"github.com/CharlesLuxinger/Go/ByteBank/contas"
 )
 
 func main() {
