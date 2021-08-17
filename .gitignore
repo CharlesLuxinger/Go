@@ -1,2 +1,8 @@
 *.DS_Store
 *.log
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr

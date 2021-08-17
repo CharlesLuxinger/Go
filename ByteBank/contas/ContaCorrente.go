@@ -1,6 +1,6 @@
 package contas
 
-import "github.com/ByteBank/clientes"
+import "Go/ByteBank/clientes"
 
 type ContaCorrente struct {
 	Titular        clientes.Titular
